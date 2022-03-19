@@ -1,0 +1,126 @@
+<html>
+<head>
+<script>
+function d(val)
+{
+document.getElementById('result').value+=val;
+}
+function solve()
+{
+var value1=document.getElementById('result').value;
+res=eval(value1);
+document.getElementById('result').value=res;
+}
+function cleard()
+{
+document.getElementById('result').value="";
+}
+
+function backspace()
+{
+size=myform.value.value.length;
+myform.value.value=myform.value.value.substring(0,size-1);
+}
+function cosclicked()
+{
+myform.value.value=Math.cos(myform.value.value);
+}
+function sinclicked()
+{
+myform.value.value=Math.sin(myform.value.value);
+}
+function tanclicked()
+{
+myform.value.value=Math.tan(myform.value.value);
+}
+function atanclicked()
+{
+myform.value.value=Math.atan(myform.value.value);
+}
+function asinclicked()
+{
+myform.value.value=Math.asin(myform.value.value);
+}
+function acosclicked()
+{
+myform.value.value=Math.acos(myform.value.value);
+}
+function sqrt()
+{
+myform.value.value=Math.sqrt(myform.value.value);
+}
+</script>
+
+<style type="text/css">
+body,html
+{
+margin:0px;
+}
+
+input[type="button"]
+{
+border:none;
+width:100%;
+outline:none;
+}
+#wrap
+{
+margin:10%;
+}
+</style>
+</head>
+<body>
+<form name="myform">
+<center>
+<div id='wrap'>
+
+<table border="1">
+<tr>
+<td colspan="3"><input type="text" name="value" id="result" readonly></td>
+<td><input type="button" value="c" onclick="cleard()"></td>
+<td><input type="button" value="sin" onclick="sinclicked()"></td>
+
+</tr>
+
+<tr>
+<td><input type="button" value="1" onclick="d('1')"></td>
+<td><input type="button" value="2" onclick="d('2')"></td>
+<td><input type="button" value="3" onclick="d('3')"></td>
+<td><input type="button" value="<-" onclick="backspace()"></td>
+<td><input type="button" value="+" onclick="d('+')"></td>
+</tr>
+
+<tr>
+<td><input type="button" value="4" onclick="d('4')"></td>
+<td><input type="button" value="5" onclick="d('5')"></td>
+<td><input type="button" value="6" onclick="d('6')"></td>
+<td><input type="button" value="-" onclick="d('-')"></td>
+<td><input type="button" value="tan" onclick="tanclicked()"></td>
+</tr>
+
+<tr>
+<td><input type="button" value="7" onclick="d('7')"></td>
+<td><input type="button" value="8" onclick="d('8')"></td>
+<td><input type="button" value="9" onclick="d('9')"></td>
+<td><input type="button" value="/" onclick="d('/')"></td>
+<td><input type="button" value="tan(int)" onclick="atanclicked()"></td>
+</tr>
+
+<td><input type="button" value="*" onclick="d('*')"></td>
+<td><input type="button" value="0" onclick="d('0')"></td>
+<td><input type="button" value="." onclick="d('.')"></td>
+<td><input type="button" value="="  onclick="solve()"></td>
+<td><input type="button" value="sin(int)" onclick="asinclicked()"></td>
+</tr>
+<tr>
+<td><input type="button" value="cos(int)" onclick="acosclicked()"></td>
+<td><input type="button" value="sqrt" onclick="sqrt()"></td>
+<td><input type="button" value="cos" onclick="cosclicked()"></td>
+
+</tr>
+</table>
+</div>
+</center>
+</form>
+</body>
+</html>
